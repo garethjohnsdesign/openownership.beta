@@ -1,19 +1,75 @@
 header:
-  - title: Principles
-    url: /principles/
-  - title: What we do
-    url: /what-we-do/
-  - title: Map
-    url: /map/
-  - title: Latest
-    url: /latest/
-  - title: Resources
-    url: /resources/
   - title: About
-    url: /about/
-  - title: Jobs
-    url: /jobs/
-
+    url: https://docs.google.com/document/d/1PcS4VMfuEwZGZ-yv9KpX7PEUIKPuVoT7tx5rRiiOtV4/edit?usp=sharing
+    sublinks:
+    - title: Beneficial ownership explained
+      url: /what-is-bot
+    - title: What we do
+      url: /what-we-do
+    - title: Team
+      url: /team
+    - title: Supporters
+      url: https://docs.google.com/document/d/1ts29o3pWM36dKsbjTBDEpAcYV6n0wpNY_sEyQ3L7avY/edit?usp=sharing
+    - title: Jobs
+      url: /jobs
+  - title: Latest
+    url: /latest
+    sublinks:
+    - title: Updates
+      url: /latest
+    - title: Podcast
+      url: https://anchor.fm/open-ownership
+    - title: Subscribe
+      url: https://mailchi.mp/440be76e70f3/the-record-landing-page
+  - title: Implement
+    sublinks:
+    - title: Principles
+      url: /principles
+    - title: Guide
+      url: /guide
+    - title: Data Standard (BODS)
+      url: /what-we-do/the-beneficial-ownership-data-standard
+    - title: Visualisation System (BOVS)
+      url: /visualisation
+    - title: Forms
+      url: /resources/?resource-type=forms
+    - title: Technical notes
+      url: /resources/?resource-type=technical
+  - title: Resources
+    url: /resources
+    sublinks:
+    - title: Reports
+      url: /resources/?resource-type=reports
+    - title: Tools
+      url: /resources/?resource-type=tools
+  - title: Countries
+    url: /map
+    sublinks:
+    - title: Priority countries
+      url: https://docs.google.com/document/d/1dPkSHq-HucQNn6hIUIdgSMGNESNo4ZoO8PLCsHo9pXg/edit?usp=sharing
+    - title: GloBo
+      url: /what-we-do/the-beneficial-ownership-leadership-group/
+  - title: Impact
+    url: https://docs.google.com/document/d/1u4C9aS9XsNrbDewSEbUlaOnVic1uS-Yqg_QBUw8blJA/edit?usp=sharing
+    sublinks:
+    - title: Procurement
+      url: https://docs.google.com/document/d/1roSURm0OoJIBGL3RI7cNNShVjR5d--ppGT7mOCiQiIo/edit?usp=sharing
+    - title: Extractives
+      url: https://docs.google.com/document/d/1LGoEdKyML58VNus885PPW_PD78UADXlOxp6QaPZizdk/edit?usp=sharing
+    - title: Full Economy
+      url: https://docs.google.com/document/d/1_XCqedztMIKq3RhgqiBromURFym3xOgEw9upQS3Kr_Y/edit?usp=sharing
+    - title: Case Studies
+      url: /resources/?resource-type=case-studies
+    - title: Register
+      url: //register.openownership.org/
+    - title: Map
+      url: /map
+  - title: Data
+    sublinks:
+    - title: Register
+      url: //register.openownership.org/
+    - title: Data Standard (BODS)
+      url: //standard.openownership.org/
 footer:
   - title: Principles
     url: /principles/

@@ -1,0 +1,16 @@
+{% if include.url %}
+    {% if include.url contains "//" %}
+        <a href="{{ include.url }}" class="external">
+            {{ include.title }}
+            <span class="show-for-large">
+                <svg class="icon icon-external">
+                    <use xlink:href="/assets/icons/symbol-defs.svg#icon-external"></use>
+                </svg>
+            </span>
+        </a>
+    {% else %}
+        <a href="{{ include.url }}">{{ include.title }}</a>
+    {% endif %}
+{% else %}
+    <a>{{ include.title }}</a>
+{% endif %}

@@ -1,9 +1,9 @@
 ---
-title: About
+title: Team
 position: 4
-description: 'OpenOwnership thrives on collaboration with a diverse and global range
+description: OpenOwnership thrives on collaboration with a diverse and global range
   of people and organizations. If you want to know more about how OpenOwnership can
-  help you, please get in touch. '
+  help you, please get in touch.
 governance-text: |-
   Open Ownership is a non-profit run by a small, expert team well positioned to
   support countries implementing beneficial ownership transparency (BOT). Our

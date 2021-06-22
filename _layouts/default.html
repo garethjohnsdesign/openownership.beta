@@ -1,5 +1,24 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en" dir="ltr">
+{% if page.name == 'index.md' %}{% assign home = true %}{% else %}{% assign home = false %}{% endif %}
+
+{% assign section = null %}
+{% for entry in site.data.navigation.header %}
+  {% if section == null %}
+    {% if entry.url and page.url contains entry.url %}
+      {% assign section = entry.title %}
+    {% else %}
+      {% if entry.sublinks %}
+        {% for sublink in entry.sublinks %}
+          {% if sublink.url and page.url contains sublink.url %}
+            {% assign section = entry.title %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
 
 <!-- Head -->
 {% include site/head.html %}

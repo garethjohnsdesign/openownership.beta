@@ -1,32 +1,23 @@
 <div class="grid-x grid-padding-y padding-2 sans-bold offcanvas">
   <div class="small-12 cell">
 
-  {% for entry in site.data.navigation.header %}{% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}{% if fullurl == page.url %}{% assign current_page = fullurl %}{% break %}{% elsif page.url contains fullurl %}{% assign current_page = fullurl %}{% endif %}{% endfor %}
-
-      <ul class="vertical menu" data-accordion-menu>
-        {% for entry in site.data.navigation.header %}
-          {% if entry.url == current_page %}
-            {% assign current = ' class="active"' %}
-          {% else %}
-            {% assign current = null %}
+    <ul class="vertical menu accordion-menu" data-accordion-menu data-submenu-toggle="true">
+      {% for entry in site.data.navigation.header %}
+        <li{% if section == entry.title %} class="active"{% endif %}>
+          {% include site/menulink.html url=entry.url title=entry.title %}
+          {% if entry.sublinks %}
+            <ul class="menu vertical nested">
+              {% for sublink in entry.sublinks %}
+                <li{% if page.url contains sublink.url %} class="active"{% endif %}>
+                  {% include site/menulink.html url=sublink.url title=sublink.title %}
+                </li>
+              {% endfor %}
+            </ul>
           {% endif %}
-          {% assign sublinks = entry.sublinks %}
-          {% if sublinks %}
-            <li{{ current }}><a href="#">{{ entry.title }}</a>
-              <ul class="menu vertical nested">
-                  {% for sublink in sublinks %}
-                  <li><a href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a></li>
-                  {% endfor %}
-              </ul>
-            </li>
-          {% else %}
-            <li{{ current }}><a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a></li>
-          {% endif %}
-        {% endfor %}
-        <li class="external"><a href="/guide">Guide <svg class="icon icon-external"><use xlink:href="/assets/icons/symbol-defs.svg#icon-external"></use></svg></a></li>
-        <li class="external"><a href="https://register.openownership.org">Register <svg class="icon icon-external"><use xlink:href="/assets/icons/symbol-defs.svg#icon-external"></use></svg></a></li>
-        <li><a href="/espanol/">Español</a></li>
+        </li>
+      {% endfor %}
     </ul>
+
 
     <ul class="menu simple social-links margin-top-2">
       {% for item in site.social %}

@@ -1,4 +1,7 @@
-{% for entry in site.data.navigation.footer %}{% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}{% if fullurl == page.url %}{% assign current_page = fullurl %}{% break %}{% elsif page.url contains fullurl %}{% assign current_page = fullurl %}{% endif %}{% endfor %}
+{% for entry in site.data.navigation.footer %}
+{% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}
+{% if fullurl == page.url %}
+{% assign current_page = fullurl %}{% break %}{% elsif page.url contains fullurl %}{% assign current_page = fullurl %}{% endif %}{% endfor %}
 
 <!-- Footer -->
 <footer class="grid-x grid-padding-x grid-padding-y align-justify primary-background sans-bold padding-1">
@@ -20,13 +23,12 @@
 
   <div class="small-12 medium-6 large-4 xlarge-shrink cell">
     <ul class="vertical menu text-center medium-text-left">
-      {% for entry in site.data.navigation.footer %}
-      {% if entry.url == current_page %}
-      {% assign current = ' class="active"' %}
-      {% else %}
-      {% assign current = null %}
-      {% endif %}
-      <li{{ current }}><a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a></li>
+      {% for entry in site.data.navigation.header %}
+        {% if entry.url %}
+        <li{% if section == entry.title %} class="active"{% endif %}>
+          {% include site/menulink.html url=entry.url title=entry.title %}
+        </li>
+        {% endif %}
       {% endfor %}
     </ul>
   </div>
