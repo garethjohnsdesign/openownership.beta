@@ -14,8 +14,14 @@ layout: default
   <div class="grid-x grid-padding-x grid-padding-y">
     {% if page.thumbnail-image %}
       {% assign image = page.thumbnail-image %}
+      {% for file in page.files %}
+        {% assign first_file = file[1] %}
+        {% break %}
+      {% endfor %}
       <div class="small-6 medium-3 cell">
-        <img src="{{ page.thumbnail-image }}" class="image--resource {{page.thumbnail-image-class}}">
+        <a href="{{ first_file }}">
+          <img src="{{ page.thumbnail-image }}" class="image--resource {{page.thumbnail-image-class}}">
+        </a>
       </div>
     {% endif %}
     <div class="small-12 medium-9 cell">
