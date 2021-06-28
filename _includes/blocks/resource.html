@@ -6,23 +6,12 @@
          ">
 
   <div class="small-12 medium-6 large-2 cell">
-    <img src="{{ resource.thumbnail-image }}" class="image--resource {{resource.thumbnail-image-class}}">
+    <a href="{{ resource.url }}"><img src="{{ resource.thumbnail-image }}" class="image--resource {{resource.thumbnail-image-class}}"></a>
   </div>
 
   <div class="small-12 medium-6 large-10 cell">
-    <h5 class="sans-bold">{{resource .title}}</h5>
-    <div class="medium-gray margin-bottom-1">{{resource.author }} · {{ resource.date | date: site.date_format }}</div>
+    <h5 class="sans-bold"><a href="{{ resource.url }}">{{ resource.title}}</a></h5>
+    <div class="medium-gray margin-bottom-1">{{ resource.author }} · {{ resource.date | date: site.date_format }}</div>
     {{resource.content | markdownify}}
-    <p>
-      <strong>View in</strong>
-    </p>
-    <p>
-      {% for file in resource.files %}
-        <a class="button margin-bottom-0" href="{{ file[1] }}">
-          {% assign lang_code = file[0] %}
-          {{ site.data.language_names[lang_code]['name'] | capitalize }}
-        </a>
-      {% endfor %}
-    </p>
   </div>
 </div>
