@@ -8,7 +8,8 @@ layout: default
   <section class="grid-container">
     <div class="grid-x grid-padding-x grid-padding-y page__title border-bottom">
       <div class="small-12 medium-10 large-8 cell">
-        <h1>{{ page.title }}</h1>
+        <h1 class="h3 margin-top-0"><a href="/principles">The Open Ownership Principles</a> &mdash; {{ page.title }}</h1>
+        <aside class="medium-gray small">Last updated: {{ page.date | date: "%B %Y" }}</aside>
       </div>
     </div>
   </section>
@@ -25,9 +26,14 @@ layout: default
       <div class="small-9 cell">
         <h2>{{ page.full-title }}</h2>
 
-        {{page.summary_version | markdownify}}
+        <div class="text-body">
+          <div class="lead margin-bottom-2 margin-top-2">
+            {{ page.summary_version | markdownify }}
+          </div>
 
-        {{page.content | markdownify}}
+          {{ content }}
+
+        </div>
 
         {% capture guides -%}
           {%- for guide in site.guide -%}

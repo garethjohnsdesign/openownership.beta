@@ -3,30 +3,25 @@ layout: default
 ---
 
 <section class="principles__page">
-  <!-- Page Title -->
-  {% include blocks/title.html  %}
-  <!-- End Page Title -->
+	<!-- Page Title -->
+	{% include blocks/title.html  %}
+	<!-- End Page Title -->
 
-  <!-- Page Content -->
-  {% unless page.content == '' %}
-    <section class="grid-container">
-      <div class="grid-x grid-padding-x grid-padding-y align-center">
-        <div class="small-3 cell">
-          {% include blocks/principles-index.html  %}
-        </div>
-        <div class="small-9 cell">
-          {{page.content | markdownify}}
-          {% assign sorted_principles = site.principles | sort:"order" %}
-          {% for principle in sorted_principles %}
-            <h3>{{ principle.full-title }}</h3>
-            <p>{{ principle.summary_version | markdownify }}</p>
-            <p><a href="{{principle.url}}">Read more</a></p>
-          {% endfor %}
+	<!-- Page Content -->
+	{% unless page.content == '' %}
+		<section class="grid-container">
+			<div class="grid-x grid-padding-x grid-padding-y align-center">
+				<div class="small-3 cell">
+					{% include blocks/principles-index.html  %}
+				</div>
+				<div class="small-9 cell">
+					{{ content }}
 
-       </div>
+					<p class="medium-gray">Last updated: {{ page.date | date: "%B %Y" }}</p>
+				</div>
 
-     </div>
-   </section>
- {% endunless %}
- <!-- End Page Content -->
+		 </div>
+		</section>
+ 	{% endunless %}
+	<!-- End Page Content -->
 </section>

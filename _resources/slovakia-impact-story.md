@@ -2,6 +2,7 @@
 title: 'Early impacts of public registers of beneficial ownership: Slovakia'
 date: 2020-10-13 13:51:00 Z
 tags:
+- public access
 - slovakia
 files:
   en: "/uploads/slovakia-impact-story.pdf"

@@ -13,7 +13,7 @@ principles:
 - Public access
 - Sufficient detail
 - Robust definitions
-- Verified
+- Verification
 ---
 
 Some of the most notable tasks for legislative attention will include, among others:

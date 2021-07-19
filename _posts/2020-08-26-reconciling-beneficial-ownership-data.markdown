@@ -128,7 +128,7 @@ The final important lesson we’ve learnt with reconciliation is that it is neve
 
 ## Summary
 
-In summary, the process of reconciliation is one of the most important tasks when using BO data, and it is one that drives many of OO’s technical and policy decisions. It is the concern behind our inclusion of [sufficient detail](https://www.openownership.org/framework/sufficient-detail/) in our [principles for effective BO disclosure](https://www.openownership.org/framework/) and one of the key things that is enabled by [structured](https://www.openownership.org/framework/structured-data/) and [verified](https://www.openownership.org/framework/verified/) data. As we will see in future posts, it also overlaps heavily with the process of de-duplication and the need to store the history and provenance of data.
+In summary, the process of reconciliation is one of the most important tasks when using BO data, and it is one that drives many of OO’s technical and policy decisions. It is the concern behind our inclusion of [sufficient detail](https://www.openownership.org/framework/sufficient-detail/) in our [principles for effective BO disclosure](https://www.openownership.org/framework/) and one of the key things that is enabled by [structured](https://www.openownership.org/framework/structured-data/) and [verified](https://www.openownership.org/framework/verification/) data. As we will see in future posts, it also overlaps heavily with the process of de-duplication and the need to store the history and provenance of data.
 
 Key findings:
 

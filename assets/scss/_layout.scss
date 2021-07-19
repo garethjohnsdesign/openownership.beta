@@ -211,6 +211,12 @@ p {
   font-family: $serif-headline;
 }
 
+.text-body {
+  li {
+    margin-top: 0.4em
+  }
+}
+
 .text-with-sections {
 
   h1, h2 {
@@ -233,7 +239,7 @@ p {
 
 }
 
-// Override Foundation's core styles for definition lists
+// Override Foundation's core styles for lists
 dl dt {
   margin-top: 0.75rem;
   font-family: $sans-bold

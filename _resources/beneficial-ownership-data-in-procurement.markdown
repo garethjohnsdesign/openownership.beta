@@ -3,6 +3,9 @@ title: Beneficial ownership data in procurement
 date: 2021-03-11 12:22:00 Z
 categories:
 - Policy Briefing
+tags:
+- public access
+- structured data
 files:
   en: "/uploads/OO%20BO%20Data%20in%20Procurement.pdf"
   es: "/uploads/OPO%20Procurement%20Paper%20ES.pdf"

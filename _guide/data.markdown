@@ -5,11 +5,11 @@ position: 4
 layout: guide-page
 description: 'In this section, the following will be examined: how to scope out the
   information collected within declarations; how to implement mechanisms to improve
-  data quality according to the OO Principle of [verification](/principles/verified/);
+  data quality according to the OO Principle of [verification](/principles/verification/);
   and the importance of standardised, well-[structured data](/principles/structured-data/).
   OO has also developed a prototyping tool for a basic system for collecting BO data.'
 principles:
-- Verified
+- Verification
 - Structured data
 - Comprehensive coverage
 - Sufficient detail
@@ -79,7 +79,7 @@ In Ukraine, early publications of BO data contained all the information relating
 </table>
 </figure>
 
-There are multiple advantages to standardising the way that BO data is collected, stored, and published. In particular, [structured data](/principles/structured-data/) allows for automated [verification](/principles/verified/) checks on data. For instance, making sure it is in the right format or cross-referencing it with other government databases.
+There are multiple advantages to standardising the way that BO data is collected, stored, and published. In particular, [structured data](/principles/structured-data/) allows for automated [verification](/principles/verification/) checks on data. For instance, making sure it is in the right format or cross-referencing it with other government databases.
 
 Structuring BO information in a standard format makes it easier to link with other jurisdictions’ data to better understand international ownership structures. This can reduce the need for, and resources dedicated to, formal and lengthy mutual legal assistance requests between different jurisdictions’ authorities.
 
@@ -119,7 +119,7 @@ Testing the form with a representative sample of companies will help to re-draft
 
 ## Verification of beneficial ownership data
 
-Another consideration around BO data is how to verify the information submitted. [Verification](/principles/verified/) is the combination of checks and processes to ensure that BO data is of high quality, meaning it is accurate and complete at a given point in time. To maximise the impact of BO registers, users and authorities must be able to trust the data contained in a register. Verification systems help increase confidence that the representation of ownership in a register has a high degree of fidelity to the true and current reality of who owns or controls a particular company.
+Another consideration around BO data is how to verify the information submitted. [Verification](/principles/verification/) is the combination of checks and processes to ensure that BO data is of high quality, meaning it is accurate and complete at a given point in time. To maximise the impact of BO registers, users and authorities must be able to trust the data contained in a register. Verification systems help increase confidence that the representation of ownership in a register has a high degree of fidelity to the true and current reality of who owns or controls a particular company.
 
 <figure markdown="1">
 <figcaption id="figure-2">Figure 2: Designing verification systems</figcaption>
