@@ -20,7 +20,8 @@ collections:
     sort_by: order
   resources:
     title: Resources
-    output: false
+    output: true
+
   team:
     title: Team
     output: true
@@ -54,6 +55,7 @@ defaults:
     path: ''
     type: resources
   values:
+    layout: resource-page
     description: 
     files:
       en: 
@@ -63,6 +65,7 @@ defaults:
     resource_type: 
     is_featured: false
     position: 
+    more_text: 
 - scope:
     path: ''
     type: principles

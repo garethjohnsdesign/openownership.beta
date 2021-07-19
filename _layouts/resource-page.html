@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+<section class="grid-container">
+  <div class="grid-x grid-padding-x grid-padding-y page__title border-bottom">
+    <div class="small-12 medium-10 cell" cell">
+      <h1>{{ page.title }}</h1>
+    </div>
+  </div>
+</section>
+
+<section class="grid-container">
+  <div class="grid-x grid-padding-x grid-padding-y">
+    {% if page.thumbnail-image %}
+      {% assign image = page.thumbnail-image %}
+      {% for file in page.files %}
+        {% assign first_file = file[1] %}
+        {% break %}
+      {% endfor %}
+      <div class="small-6 medium-3 cell">
+        <a href="{{ first_file }}">
+          <img src="{{ page.thumbnail-image }}" class="image--resource {{page.thumbnail-image-class}}">
+        </a>
+      </div>
+    {% endif %}
+    <div class="small-12 medium-9 cell">
+      <p>
+        <a href="/resources/?resource-type={{ page.resource_type | slugify }}" class="label label--tag text-capitalize">{{ page.resource_type }}</a>
+        {% for tag in page.tags %}
+          <a href="/resources/?topic={{ tag | slugify }}" class="label label--tag text-capitalize">{{ tag }}</a>
+        {% endfor %}
+      </p>
+
+      {{ content }}
+
+      <h5 class="sans-bold margin-top-2">
+        {% if page.thumbnail-image-class == 'web-resource' %}
+          View resource
+        {% else %}
+          Download
+        {% endif %}
+      </h5>
+      
+      <p class="margin-bottom-2">
+        {% for file in page.files %}
+          <a class="button" href="{{ file[1] }}">
+            {% assign lang_code = file[0] %}
+            {{ site.data.language_names[lang_code]['name'] | capitalize }}
+          </a>
+        {% endfor %}
+      </p>
+
+      <h5 class="sans-bold">Published</h5>
+      <p class="medium-gray margin-bottom-2">{{ page.date | date: site.date_format }}</p>
+      
+      <h5 class="sans-bold">Authors</h5>
+      <p class="medium-gray">{{ page.author }}</p>
+
+    </div>
+  </div>
+</section>
+
+{% if page.more_text %}
+<section class="grid-container">
+  <div class="grid-x grid-padding-x grid-padding-y align-center">
+    <div class="small-12 large-8 cell">
+      <hr class="margin-bottom-3" />
+      {{ page.more_text | markdownify }}
+    </div>
+  </div>
+</section>
+{% endif %}
